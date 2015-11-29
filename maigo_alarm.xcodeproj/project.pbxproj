@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AD731DB1C0AF67700F01B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */; };
+		6AD731DD1C0AF67700F01B83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731DC1C0AF67700F01B83 /* ViewController.swift */; };
+		6AD731E01C0AF67700F01B83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD731DE1C0AF67700F01B83 /* Main.storyboard */; };
+		6AD731E21C0AF67700F01B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD731E11C0AF67700F01B83 /* Assets.xcassets */; };
+		6AD731E51C0AF67700F01B83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD731E31C0AF67700F01B83 /* LaunchScreen.storyboard */; };
+		6AD731F01C0AF67700F01B83 /* maigo_alarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731EF1C0AF67700F01B83 /* maigo_alarmTests.swift */; };
+		6AD731FB1C0AF67700F01B83 /* maigo_alarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731FA1C0AF67700F01B83 /* maigo_alarmUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AD731EC1C0AF67700F01B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AD731CF1C0AF67700F01B83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AD731D61C0AF67700F01B83;
+			remoteInfo = maigo_alarm;
+		};
+		6AD731F71C0AF67700F01B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AD731CF1C0AF67700F01B83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AD731D61C0AF67700F01B83;
+			remoteInfo = maigo_alarm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6AD731D71C0AF67700F01B83 /* maigo_alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maigo_alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6AD731DC1C0AF67700F01B83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6AD731DF1C0AF67700F01B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AD731E11C0AF67700F01B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6AD731E41C0AF67700F01B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6AD731E61C0AF67700F01B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD731EB1C0AF67700F01B83 /* maigo_alarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = maigo_alarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD731EF1C0AF67700F01B83 /* maigo_alarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maigo_alarmTests.swift; sourceTree = "<group>"; };
+		6AD731F11C0AF67700F01B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD731F61C0AF67700F01B83 /* maigo_alarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = maigo_alarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD731FA1C0AF67700F01B83 /* maigo_alarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maigo_alarmUITests.swift; sourceTree = "<group>"; };
+		6AD731FC1C0AF67700F01B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AD731D41C0AF67700F01B83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD731E81C0AF67700F01B83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD731F31C0AF67700F01B83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AD731CE1C0AF67700F01B83 = {
+			isa = PBXGroup;
+			children = (
+				6AD731D91C0AF67700F01B83 /* maigo_alarm */,
+				6AD731EE1C0AF67700F01B83 /* maigo_alarmTests */,
+				6AD731F91C0AF67700F01B83 /* maigo_alarmUITests */,
+				6AD731D81C0AF67700F01B83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AD731D81C0AF67700F01B83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AD731D71C0AF67700F01B83 /* maigo_alarm.app */,
+				6AD731EB1C0AF67700F01B83 /* maigo_alarmTests.xctest */,
+				6AD731F61C0AF67700F01B83 /* maigo_alarmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AD731D91C0AF67700F01B83 /* maigo_alarm */ = {
+			isa = PBXGroup;
+			children = (
+				6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */,
+				6AD731DC1C0AF67700F01B83 /* ViewController.swift */,
+				6AD731DE1C0AF67700F01B83 /* Main.storyboard */,
+				6AD731E11C0AF67700F01B83 /* Assets.xcassets */,
+				6AD731E31C0AF67700F01B83 /* LaunchScreen.storyboard */,
+				6AD731E61C0AF67700F01B83 /* Info.plist */,
+			);
+			path = maigo_alarm;
+			sourceTree = "<group>";
+		};
+		6AD731EE1C0AF67700F01B83 /* maigo_alarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AD731EF1C0AF67700F01B83 /* maigo_alarmTests.swift */,
+				6AD731F11C0AF67700F01B83 /* Info.plist */,
+			);
+			path = maigo_alarmTests;
+			sourceTree = "<group>";
+		};
+		6AD731F91C0AF67700F01B83 /* maigo_alarmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6AD731FA1C0AF67700F01B83 /* maigo_alarmUITests.swift */,
+				6AD731FC1C0AF67700F01B83 /* Info.plist */,
+			);
+			path = maigo_alarmUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AD731D61C0AF67700F01B83 /* maigo_alarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD731FF1C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarm" */;
+			buildPhases = (
+				6AD731D31C0AF67700F01B83 /* Sources */,
+				6AD731D41C0AF67700F01B83 /* Frameworks */,
+				6AD731D51C0AF67700F01B83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = maigo_alarm;
+			productName = maigo_alarm;
+			productReference = 6AD731D71C0AF67700F01B83 /* maigo_alarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AD731EA1C0AF67700F01B83 /* maigo_alarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD732021C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarmTests" */;
+			buildPhases = (
+				6AD731E71C0AF67700F01B83 /* Sources */,
+				6AD731E81C0AF67700F01B83 /* Frameworks */,
+				6AD731E91C0AF67700F01B83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AD731ED1C0AF67700F01B83 /* PBXTargetDependency */,
+			);
+			name = maigo_alarmTests;
+			productName = maigo_alarmTests;
+			productReference = 6AD731EB1C0AF67700F01B83 /* maigo_alarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6AD731F51C0AF67700F01B83 /* maigo_alarmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD732051C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarmUITests" */;
+			buildPhases = (
+				6AD731F21C0AF67700F01B83 /* Sources */,
+				6AD731F31C0AF67700F01B83 /* Frameworks */,
+				6AD731F41C0AF67700F01B83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AD731F81C0AF67700F01B83 /* PBXTargetDependency */,
+			);
+			name = maigo_alarmUITests;
+			productName = maigo_alarmUITests;
+			productReference = 6AD731F61C0AF67700F01B83 /* maigo_alarmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AD731CF1C0AF67700F01B83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "小林芳樹";
+				TargetAttributes = {
+					6AD731D61C0AF67700F01B83 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = LCY9Z535A8;
+					};
+					6AD731EA1C0AF67700F01B83 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = LCY9Z535A8;
+						TestTargetID = 6AD731D61C0AF67700F01B83;
+					};
+					6AD731F51C0AF67700F01B83 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = LCY9Z535A8;
+						TestTargetID = 6AD731D61C0AF67700F01B83;
+					};
+				};
+			};
+			buildConfigurationList = 6AD731D21C0AF67700F01B83 /* Build configuration list for PBXProject "maigo_alarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AD731CE1C0AF67700F01B83;
+			productRefGroup = 6AD731D81C0AF67700F01B83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AD731D61C0AF67700F01B83 /* maigo_alarm */,
+				6AD731EA1C0AF67700F01B83 /* maigo_alarmTests */,
+				6AD731F51C0AF67700F01B83 /* maigo_alarmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AD731D51C0AF67700F01B83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD731E51C0AF67700F01B83 /* LaunchScreen.storyboard in Resources */,
+				6AD731E21C0AF67700F01B83 /* Assets.xcassets in Resources */,
+				6AD731E01C0AF67700F01B83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD731E91C0AF67700F01B83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD731F41C0AF67700F01B83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AD731D31C0AF67700F01B83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD731DD1C0AF67700F01B83 /* ViewController.swift in Sources */,
+				6AD731DB1C0AF67700F01B83 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD731E71C0AF67700F01B83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD731F01C0AF67700F01B83 /* maigo_alarmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD731F21C0AF67700F01B83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD731FB1C0AF67700F01B83 /* maigo_alarmUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AD731ED1C0AF67700F01B83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AD731D61C0AF67700F01B83 /* maigo_alarm */;
+			targetProxy = 6AD731EC1C0AF67700F01B83 /* PBXContainerItemProxy */;
+		};
+		6AD731F81C0AF67700F01B83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AD731D61C0AF67700F01B83 /* maigo_alarm */;
+			targetProxy = 6AD731F71C0AF67700F01B83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6AD731DE1C0AF67700F01B83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD731DF1C0AF67700F01B83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AD731E31C0AF67700F01B83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD731E41C0AF67700F01B83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AD731FD1C0AF67700F01B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AD731FE1C0AF67700F01B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AD732001C0AF67700F01B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = maigo_alarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maigo-alarm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6AD732011C0AF67700F01B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = maigo_alarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maigo-alarm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6AD732031C0AF67700F01B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = maigo_alarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maigo-alarmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/maigo_alarm.app/maigo_alarm";
+			};
+			name = Debug;
+		};
+		6AD732041C0AF67700F01B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = maigo_alarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maigo-alarmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/maigo_alarm.app/maigo_alarm";
+			};
+			name = Release;
+		};
+		6AD732061C0AF67700F01B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = maigo_alarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maigo-alarmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = maigo_alarm;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6AD732071C0AF67700F01B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = maigo_alarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maigo-alarmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = maigo_alarm;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AD731D21C0AF67700F01B83 /* Build configuration list for PBXProject "maigo_alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD731FD1C0AF67700F01B83 /* Debug */,
+				6AD731FE1C0AF67700F01B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD731FF1C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD732001C0AF67700F01B83 /* Debug */,
+				6AD732011C0AF67700F01B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6AD732021C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD732031C0AF67700F01B83 /* Debug */,
+				6AD732041C0AF67700F01B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6AD732051C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD732061C0AF67700F01B83 /* Debug */,
+				6AD732071C0AF67700F01B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AD731CF1C0AF67700F01B83 /* Project object */;
+}
