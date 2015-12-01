@@ -21,8 +21,6 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
     let peripheralModel = PeripheralModel()
     
     var cmModelDelegate: CentralManagerModelDelegate?
-
-    var peripheral: CBPeripheral!
     
     override init() {
         super.init()
@@ -30,9 +28,9 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
-    func startConnect() {
+    func startConnect(peripheral: CBPeripheral) {
         //接続を開始する
-        self.centralManager.connectPeripheral(self.peripheral, options: nil)
+        self.centralManager.connectPeripheral(peripheral, options: nil)
     }
     
     
@@ -42,7 +40,6 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
         
         switch (central.state) {
         case CBCentralManagerState.PoweredOn:
-            print("hogehoge")
             self.centralManager = central
             self.centralManager.scanForPeripheralsWithServices(nil, options: nil)
         default:
@@ -56,6 +53,7 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
         //周辺デバイスが見つかると呼ばれる
         print("発見したBLEデバイス： \(peripheral)")
+        //self.peripheralModel.peripheral = peripheral
         self.cmModelDelegate?.centralManagerModelDiscoverPeripheral(central, didDiscoverPeripheral: peripheral)
     }
     
@@ -63,10 +61,7 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
         print("接続成功")
         //参照を保持するためにstrongプロパティにセットする
         //そうしないと勝手に解放されて接続が切れる
-        self.peripheral = peripheral
-        self.peripheral.delegate = self.peripheralModel
-        self.peripheral.discoverServices(nil)
-
+        self.peripheralModel.peripheral = peripheral
         self.cmModelDelegate?.centralManagerModel(central, didConnectPeripheral: peripheral)
     }
     

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6AD731DB1C0AF67700F01B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */; };
-		6AD731DD1C0AF67700F01B83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731DC1C0AF67700F01B83 /* ViewController.swift */; };
+		6AD731DD1C0AF67700F01B83 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731DC1C0AF67700F01B83 /* RegistViewController.swift */; };
 		6AD731E01C0AF67700F01B83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD731DE1C0AF67700F01B83 /* Main.storyboard */; };
 		6AD731E21C0AF67700F01B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD731E11C0AF67700F01B83 /* Assets.xcassets */; };
 		6AD731E51C0AF67700F01B83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD731E31C0AF67700F01B83 /* LaunchScreen.storyboard */; };
@@ -16,6 +16,9 @@
 		6AD731FB1C0AF67700F01B83 /* maigo_alarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731FA1C0AF67700F01B83 /* maigo_alarmUITests.swift */; };
 		6AD732091C0AFD2300F01B83 /* CentralManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD732081C0AFD2300F01B83 /* CentralManagerModel.swift */; settings = {ASSET_TAGS = (); }; };
 		6AD7320B1C0B07FA00F01B83 /* PeripheralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7320A1C0B07FA00F01B83 /* PeripheralModel.swift */; settings = {ASSET_TAGS = (); }; };
+		6AD7320D1C0BA33900F01B83 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7320C1C0BA33900F01B83 /* ScanViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6AD732111C0DF5DD00F01B83 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD732101C0DF5DD00F01B83 /* CoreBluetooth.framework */; };
+		6AD732131C0DF5EA00F01B83 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD732121C0DF5EA00F01B83 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 /* Begin PBXFileReference section */
 		6AD731D71C0AF67700F01B83 /* maigo_alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maigo_alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AD731DC1C0AF67700F01B83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6AD731DC1C0AF67700F01B83 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
 		6AD731DF1C0AF67700F01B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AD731E11C0AF67700F01B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AD731E41C0AF67700F01B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		6AD731FC1C0AF67700F01B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD732081C0AFD2300F01B83 /* CentralManagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralManagerModel.swift; sourceTree = "<group>"; };
 		6AD7320A1C0B07FA00F01B83 /* PeripheralModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralModel.swift; sourceTree = "<group>"; };
+		6AD7320C1C0BA33900F01B83 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		6AD732101C0DF5DD00F01B83 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		6AD732121C0DF5EA00F01B83 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD732131C0DF5EA00F01B83 /* AudioToolbox.framework in Frameworks */,
+				6AD732111C0DF5DD00F01B83 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,8 @@
 		6AD731CE1C0AF67700F01B83 = {
 			isa = PBXGroup;
 			children = (
+				6AD732121C0DF5EA00F01B83 /* AudioToolbox.framework */,
+				6AD732101C0DF5DD00F01B83 /* CoreBluetooth.framework */,
 				6AD731D91C0AF67700F01B83 /* maigo_alarm */,
 				6AD731EE1C0AF67700F01B83 /* maigo_alarmTests */,
 				6AD731F91C0AF67700F01B83 /* maigo_alarmUITests */,
@@ -102,13 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */,
-				6AD731DC1C0AF67700F01B83 /* ViewController.swift */,
+				6AD731DC1C0AF67700F01B83 /* RegistViewController.swift */,
 				6AD731DE1C0AF67700F01B83 /* Main.storyboard */,
 				6AD731E11C0AF67700F01B83 /* Assets.xcassets */,
 				6AD731E31C0AF67700F01B83 /* LaunchScreen.storyboard */,
 				6AD731E61C0AF67700F01B83 /* Info.plist */,
 				6AD732081C0AFD2300F01B83 /* CentralManagerModel.swift */,
 				6AD7320A1C0B07FA00F01B83 /* PeripheralModel.swift */,
+				6AD7320C1C0BA33900F01B83 /* ScanViewController.swift */,
 			);
 			path = maigo_alarm;
 			sourceTree = "<group>";
@@ -264,8 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AD731DD1C0AF67700F01B83 /* ViewController.swift in Sources */,
+				6AD731DD1C0AF67700F01B83 /* RegistViewController.swift in Sources */,
 				6AD7320B1C0B07FA00F01B83 /* PeripheralModel.swift in Sources */,
+				6AD7320D1C0BA33900F01B83 /* ScanViewController.swift in Sources */,
 				6AD732091C0AFD2300F01B83 /* CentralManagerModel.swift in Sources */,
 				6AD731DB1C0AF67700F01B83 /* AppDelegate.swift in Sources */,
 			);
