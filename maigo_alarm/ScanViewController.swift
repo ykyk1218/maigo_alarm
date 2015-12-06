@@ -10,7 +10,7 @@ import UIKit
 import CoreBluetooth
 import CoreLocation
 
-class ScanViewController: UIViewController, CentralManagerModelDelegate, CLLocationManagerDelegate {
+class ScanViewController: UITableViewController, CentralManagerModelDelegate, CLLocationManagerDelegate {
     
     let scanLbl: UILabel = UILabel()
     let advertiseBtn: UIButton = UIButton()
@@ -67,7 +67,9 @@ class ScanViewController: UIViewController, CentralManagerModelDelegate, CLLocat
                 handler: {
                     (action:UIAlertAction!) -> Void in
                     print("接続開始")
+                    //スキャンによって発見したperipheralオブジェクトを
                     self.peripheralModel.peripheral = peripheral
+                    
                     self.centralManagerModel.startConnect(peripheral)
                     
                     //スキャンを停止する
@@ -89,13 +91,14 @@ class ScanViewController: UIViewController, CentralManagerModelDelegate, CLLocat
         }
     }
     
-    func centralManagerModel(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
+    func centralManagerModelDidConnectPeripheral(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
         print("接続を開始した時に呼ばれるデリゲートメソッド \(peripheral))")
         self.peripheralModel.peripheral = peripheral
+        self.peripheralModel.peripheral.delegate = self.peripheralModel
         
         //ペリフェラルに登録してあるサービスを探す
         //今回いらないはず...
-        //self.peripheralModel.peripheral.discoverServices(nil)
+        self.peripheralModel.peripheral.discoverServices(nil)
 
         self.scanLbl.text = "接続成功しました"
     }
@@ -105,7 +108,6 @@ class ScanViewController: UIViewController, CentralManagerModelDelegate, CLLocat
         if self.peripheralModel.peripheral != nil{
             self.peripheralModel.peripheral.readRSSI()
         }
-        
     }
 
 }

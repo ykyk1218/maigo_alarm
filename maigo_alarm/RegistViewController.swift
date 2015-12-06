@@ -16,8 +16,8 @@ class RegistViewController: UIViewController, UITextFieldDelegate {
     let deviseNameField:UITextField = UITextField()
     let scanNameField:UITextField = UITextField()
     
-    let centralManagerModel = CentralManagerModel()
-    let peripheralModel = PeripheralModel()
+    //let centralManagerModel = CentralManagerModel()
+    //let peripheralModel = PeripheralModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +70,10 @@ class RegistViewController: UIViewController, UITextFieldDelegate {
     func registDeviseName() {
         //if (self.deviseNameField.text?.characters.count > 0) {
             //ペリフェラルとしての名前を登録
-            self.peripheralModel.setAdvertisementDataLocalName(String(self.deviseNameField.text))
+            //self.peripheralModel.setAdvertisementDataLocalName(String(self.deviseNameField.text))
             
             //スキャン対象名を登録
-            self.peripheralModel.scanName = String(self.scanNameField.text)
+            //self.peripheralModel.scanName = String(self.scanNameField.text)
             
             self.navigationController?.pushViewController(ScanViewController(), animated: true)
             

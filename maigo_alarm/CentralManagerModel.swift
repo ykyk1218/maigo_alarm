@@ -13,12 +13,12 @@ import CoreBluetooth
 @objc protocol CentralManagerModelDelegate:NSObjectProtocol {
     //スキャン結果を返すデリゲート
     func centralManagerModelDiscoverPeripheral(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral)
-    func centralManagerModel(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral)
+    func centralManagerModelDidConnectPeripheral(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral)
 }
 
 class CentralManagerModel: NSObject, CBCentralManagerDelegate {
     var centralManager: CBCentralManager!
-    let peripheralModel = PeripheralModel()
+    //let peripheralModel = PeripheralModel()
     
     var cmModelDelegate: CentralManagerModelDelegate?
     
@@ -61,8 +61,8 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
         print("接続成功")
         //参照を保持するためにstrongプロパティにセットする
         //そうしないと勝手に解放されて接続が切れる
-        self.peripheralModel.peripheral = peripheral
-        self.cmModelDelegate?.centralManagerModel(central, didConnectPeripheral: peripheral)
+        //self.peripheralModel.peripheral = peripheral
+        self.cmModelDelegate?.centralManagerModelDidConnectPeripheral(central, didConnectPeripheral: peripheral)
     }
     
     /*

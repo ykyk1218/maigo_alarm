@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A6EE41C1C1447380036D4D5 /* PeripheralListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6EE41B1C1447380036D4D5 /* PeripheralListController.swift */; settings = {ASSET_TAGS = (); }; };
 		6AD731DB1C0AF67700F01B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */; };
 		6AD731DD1C0AF67700F01B83 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD731DC1C0AF67700F01B83 /* RegistViewController.swift */; };
 		6AD731E01C0AF67700F01B83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD731DE1C0AF67700F01B83 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A6EE41B1C1447380036D4D5 /* PeripheralListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralListController.swift; sourceTree = "<group>"; };
 		6AD731D71C0AF67700F01B83 /* maigo_alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maigo_alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD731DA1C0AF67700F01B83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AD731DC1C0AF67700F01B83 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				6AD732081C0AFD2300F01B83 /* CentralManagerModel.swift */,
 				6AD7320A1C0B07FA00F01B83 /* PeripheralModel.swift */,
 				6AD7320C1C0BA33900F01B83 /* ScanViewController.swift */,
+				6A6EE41B1C1447380036D4D5 /* PeripheralListController.swift */,
 			);
 			path = maigo_alarm;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				6AD7320D1C0BA33900F01B83 /* ScanViewController.swift in Sources */,
 				6AD732091C0AFD2300F01B83 /* CentralManagerModel.swift in Sources */,
 				6AD731DB1C0AF67700F01B83 /* AppDelegate.swift in Sources */,
+				6A6EE41C1C1447380036D4D5 /* PeripheralListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +512,7 @@
 				6AD732011C0AF67700F01B83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AD732021C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarmTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				6AD732041C0AF67700F01B83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AD732051C0AF67700F01B83 /* Build configuration list for PBXNativeTarget "maigo_alarmUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +530,7 @@
 				6AD732071C0AF67700F01B83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
