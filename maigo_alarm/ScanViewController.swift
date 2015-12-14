@@ -54,6 +54,7 @@ class ScanViewController: UITableViewController, CentralManagerModelDelegate, CL
         print("スキャン結果が見つかった時に呼ばれるデリゲートメソッド")
         print(peripheral.name)
         print(self.peripheralModel.scanName)
+        
         if peripheral.name != nil {
             self.scanLbl.text = peripheral.name! + " : " + self.peripheralModel.scanName
             self.scanLbl.sizeToFit()

@@ -10,11 +10,25 @@ import UIKit
 import CoreBluetooth
 import AudioToolbox
 
+@objc protocol PeripheralModelDelegate:NSObjectProtocol {
+    //advertise開始のデリゲート
+    func peripheralModelManagerDidStartAdvertising(peripheral: CBPeripheralManager)
+    func peripheralModelManagerDidStopAdvertising(peripheral: CBPeripheralManager)
+}
+
+@objc protocol PeripheralModelRSSIDelegate:NSObjectProtocol {
+    func peripheralRSSI(didReadRSSI RSSI: NSNumber)
+}
+
+
 class PeripheralModel: NSObject, CBPeripheralManagerDelegate, CBPeripheralDelegate {
     
     var peripheral: CBPeripheral!
     var peripheralManager: CBPeripheralManager!// = CBPeripheralManager(delegate: nil, queue: nil, options: nil)
-    var advertisementData: Dictionary = [CBAdvertisementDataLocalNameKey: "iPod touch"]
+    var advertisementData: Dictionary = [CBAdvertisementDataLocalNameKey: UIDevice.currentDevice().name]
+    var prModelDelegate: PeripheralModelDelegate?
+    var prRSSIDelegate: PeripheralModelRSSIDelegate?
+    
     var scanName = "iPod touch"
     
     //let serviceUUID = CBUUID(string: NSUUID().UUIDString)
@@ -62,10 +76,16 @@ class PeripheralModel: NSObject, CBPeripheralManagerDelegate, CBPeripheralDelega
     func advertising() {
 //        self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
         print("アドバタイズ開始")
-        
-        
         if (self.peripheralManager.isAdvertising == false) {
             self.peripheralManager.startAdvertising(self.advertisementData)
+        }
+    }
+    
+    func stopAdvertising() {
+        print("アドバタイズ停止")
+        if(self.peripheralManager != nil) {
+            self.peripheralManager.stopAdvertising()
+            self.prModelDelegate?.peripheralModelManagerDidStopAdvertising(self.peripheralManager)
         }
     }
     
@@ -77,6 +97,7 @@ class PeripheralModel: NSObject, CBPeripheralManagerDelegate, CBPeripheralDelega
     func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager, error: NSError?) {
         print(error)
         print("アドバタイズ開始のデリゲートメソッド")
+        self.prModelDelegate?.peripheralModelManagerDidStartAdvertising(peripheral)
     }
     
     
@@ -136,6 +157,7 @@ class PeripheralModel: NSObject, CBPeripheralManagerDelegate, CBPeripheralDelega
         print("RSSI: " + String(RSSI))
         if Int(RSSI) < -50 {
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            prRSSIDelegate?.peripheralRSSI(didReadRSSI: RSSI)
         }
     }
     
