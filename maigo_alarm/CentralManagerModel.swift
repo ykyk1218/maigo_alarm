@@ -62,27 +62,11 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
         //参照を保持するためにstrongプロパティにセットする
         //そうしないと勝手に解放されて接続が切れる
         //self.peripheralModel.peripheral = peripheral
+        //スキャンを停止
+        self.centralManager.stopScan()
         self.cmModelDelegate?.centralManagerModelDidConnectPeripheral(central, didConnectPeripheral: peripheral)
     }
     
-    /*
-    func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
-        //周辺デバイスに接続したときに呼ばれる
-        print("接続成功！")
-        self.stateLbl.text = "接続成功"
-        
-        //参照を保持するためにstrongプロパティにセットする
-        //そうしないと勝手に解放されて接続が切れる
-        self.peripheral = peripheral
-        
-        self.peripheral.delegate = self
-        self.peripheral.readRSSI()
-        self.peripheral.discoverServices(nil)
-        
-        self.connectBtn.addTarget(self, action: "killConnect", forControlEvents: .TouchUpInside)
-        self.connectBtn.setTitle("接続を切る", forState: UIControlState.Normal)
-    }
-    */
     
     func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
         //接続が失敗した時に呼ばれる
@@ -94,8 +78,5 @@ class CentralManagerModel: NSObject, CBCentralManagerDelegate {
         //接続が切れた時に呼ばれる
         print("接続が切れました")
         print(error)
-        
-        //self.connectBtn.setTitle("接続する", forState: UIControlState.Normal)
-        //self.connectBtn.addTarget(self, action: "startConnect", forControlEvents: .TouchUpInside)
     }
 }

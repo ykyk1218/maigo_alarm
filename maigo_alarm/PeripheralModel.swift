@@ -62,15 +62,11 @@ class PeripheralModel: NSObject, CBPeripheralManagerDelegate, CBPeripheralDelega
         
         //サービスの作成
         self.service = CBMutableService(type: self.serviceUUID, primary: true)
-        
-        super.init()
-        self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
-        
         //サービスのキャラクタリスティックを追加
         self.service.characteristics = [self.characteristic]
         
-        
-
+        super.init()
+        self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
     }
     
     func advertising() {
@@ -89,10 +85,6 @@ class PeripheralModel: NSObject, CBPeripheralManagerDelegate, CBPeripheralDelega
         }
     }
     
-    func setAdvertisementDataLocalName(localName: String) {
-        self.advertisementData = [CBAdvertisementDataLocalNameKey: localName]
-
-    }
     
     func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager, error: NSError?) {
         print(error)
@@ -154,11 +146,14 @@ class PeripheralModel: NSObject, CBPeripheralManagerDelegate, CBPeripheralDelega
     }
     
     func peripheral(peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: NSError?) {
-        print("RSSI: " + String(RSSI))
-        if Int(RSSI) < -50 {
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        //なんかエラーになることがあるのでnilの場合の判定いれとく
+        //if RSSI != nil {
+            print("RSSI: " + String(RSSI))
+            if Int(RSSI) < -50 {
+                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            }
             prRSSIDelegate?.peripheralRSSI(didReadRSSI: RSSI)
-        }
+        //}
     }
     
     func peripheralManager(peripheral: CBPeripheralManager, didAddService service: CBService, error: NSError?) {

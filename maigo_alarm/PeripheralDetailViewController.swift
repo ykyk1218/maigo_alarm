@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreBluetooth
 
 class PeripheralDetailViewController: UIViewController, PeripheralModelRSSIDelegate, CLLocationManagerDelegate {
     var peripheralModel: PeripheralModel!
@@ -21,11 +22,12 @@ class PeripheralDetailViewController: UIViewController, PeripheralModelRSSIDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.peripheralModel.prRSSIDelegate = self
+        //self.peripheralModel.prRSSIDelegate = self
         
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
-
+        
+        self.peripheralModel.prRSSIDelegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -35,8 +37,10 @@ class PeripheralDetailViewController: UIViewController, PeripheralModelRSSIDeleg
         lblPeripheralName.center = CGPointMake(self.view.bounds.width/2, navBarHeight!+50)
         lblPeripheralName.text = self.peripheralModel.peripheral.name
         
-        lblRSSI.frame  = CGRectMake(0,0,200,30)
+        lblRSSI.frame  = CGRectMake(0,0,300,200)
         lblRSSI.center = CGPointMake(self.view.bounds.width/2, navBarHeight! + 200)
+        lblRSSI.font = UIFont(name: "HiraKakuProN-W3", size: 30)
+        lblRSSI.textAlignment = NSTextAlignment.Center
         lblRSSI.text = "距離が表示される"
         
         self.view.backgroundColor = UIColor.whiteColor()
@@ -52,7 +56,7 @@ class PeripheralDetailViewController: UIViewController, PeripheralModelRSSIDeleg
     }
     
     func peripheralRSSI(didReadRSSI RSSI: NSNumber) {
-        
+        print("rssiのデリゲート")
         lblRSSI.text = String(RSSI)
     }
     

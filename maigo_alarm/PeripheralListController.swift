@@ -56,6 +56,7 @@ class PeripheralListController: UIViewController, CentralManagerModelDelegate, U
     func centralManagerModelDiscoverPeripheral(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral) {
         if peripheral.name != nil {
             self.peripheralModel.peripheral = peripheral
+            self.peripheralModel.peripheral.delegate = self.peripheralModel
             let data = ["name": peripheral.name!, "peripheral":self.peripheralModel.peripheral]
             
             //ペリフェラルの重複を防ぐ
@@ -75,9 +76,17 @@ class PeripheralListController: UIViewController, CentralManagerModelDelegate, U
     
     func centralManagerModelDidConnectPeripheral(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
         print("接続を開始した時に呼ばれるデリゲートメソッド \(peripheral))")
+        
         self.peripheralModel.peripheral = peripheral
+        
+        //接続を開始したタイミングでperipheralのデリゲートを設定
+        peripheral.delegate = self.peripheralModel
+        
+        //サービスを探す
+        peripheral.discoverServices(nil)
+        
+        //self.peripheralDetailView.peripheralModel = self.peripheralModel
         self.peripheralDetailView.peripheralModel = self.peripheralModel
-        self.peripheralDetailView.peripheralModel.peripheral = self.peripheralModel.peripheral
         self.navigationController?.pushViewController(self.peripheralDetailView, animated: true)
      
     }
